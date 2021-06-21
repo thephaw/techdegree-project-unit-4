@@ -5,10 +5,17 @@
 .btn {
     margin-top: 15px;
     width: 100%;
-    color: #fff;
+    color: $color-button-text;
     border: none;
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
-    @include btn-bg-colors($btn-bg-colors);
+    @media (min-width: 768px) {
+      padding: 10px 30px;
+    & + & {
+      margin-left: 10px;
+      }
+    }
   }
+
+  @include btn-bg-colors($btn-bg-colors);

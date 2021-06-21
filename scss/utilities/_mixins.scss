@@ -2,22 +2,37 @@
 // Mixins
 // ======================================
 
+// Colors
+@mixin btn-bg-colors($map) {
+  @each $button-name, $color in $map {
+    .#{$button-name} {
+      background-color: $color;
+    }
+  }
+}
 
+@mixin theme-colors($map) {
+  @each $column-name, $color in $map {
+    .theme.#{$column-name} {
+      background-color: $color;
+    }
+  }
+}
 
-
+// Center
+@mixin center (
+$disp: block,
+$img-margin: null auto null auto,
+$max-w: null,
+$max-h: null,
+){
+  display: $disp;
+  margin: $img-margin;
+  max-width: $max-w;
+  max-height: $max-h;
+  @content;
+}
 
 
 // Media Queries
 
-
-
-// Colors
-
-// Colors
-@mixin btn-bg-colors($map) {
-    @each $button, $color in $map {
-      .#{$button} {
-        color: $color;
-      }
-    }
-  }
