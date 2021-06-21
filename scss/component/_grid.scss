@@ -3,11 +3,11 @@
 // ======================================
 
 .container {
-    padding: 0 10px;
-    @media (min-width: 768px) {
-      max-width: $max-width;
-      @include center;
-    }
+  padding: 0 10px;
+  @media (min-width: 768px) {
+    max-width: $max-width;
+    @include center;
+  }
 }
   
 .row {
