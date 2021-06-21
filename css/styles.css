@@ -422,26 +422,6 @@ a {
   color: #927bc1;
 }
 
-.default {
-  background-color: #51ddfc;
-}
-
-.error {
-  background-color: #e4757a;
-}
-
-.info {
-  background-color: #927bc1;
-}
-
-.success {
-  background-color: #63cc82;
-}
-
-.warning {
-  background-color: #fd7856;
-}
-
 .form {
   flex-basis: 100%;
 }
