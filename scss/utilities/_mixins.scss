@@ -1,0 +1,23 @@
+// ======================================
+// Mixins
+// ======================================
+
+
+
+
+
+
+// Media Queries
+
+
+
+// Colors
+
+// Colors
+@mixin btn-bg-colors($map) {
+    @each $button, $color in $map {
+      .#{$button} {
+        color: $color;
+      }
+    }
+  }
