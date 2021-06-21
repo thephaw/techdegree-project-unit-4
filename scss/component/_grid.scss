@@ -40,5 +40,20 @@
   flex-basis: 100%;
 }
 
+.centered {  
+  @media (min-width: 768px) {
+    @include center;
+  }
+}
+
+
 @include theme-colors($theme-colors);
-  
+
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      flex-basis: nm-to-pc($i,12);
+    }
+  }
+}
+

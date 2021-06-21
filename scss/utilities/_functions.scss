@@ -1,0 +1,7 @@
+// ======================================
+// Functions
+// ======================================
+
+@function nm-to-pc($numerator, $denominator) {
+    @return ($numerator / $denominator) * 100%;
+  }
