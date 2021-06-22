@@ -47,8 +47,16 @@ $max-h: null,
 
 // Media Queries
 @mixin mq($break) {
-  @if $break == 'tab' {
-    @media (min-width: $tablet) {
+  $value: map-get($mquery-bp, $break);
+  $tablet: map-get($mquery-bp, 'tablet');
+
+  @if $value < $tablet {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: $value) {
       @content;
     }
   }

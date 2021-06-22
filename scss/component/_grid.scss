@@ -4,14 +4,14 @@
 
 .container {
   padding: 0 10px;
-  @include mq('tab') {
+  @include mq('tablet') {
     max-width: $max-width;
     @include center;
   }
 }
 
 .centered {  
-  @include mq('tab') {
+  @include mq('tablet') {
     @include center;
   }
 }
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
-  @include mq('tab') {
+  @include mq('tablet') {
     flex-direction: row;
   }
 }
@@ -31,7 +31,7 @@
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
-  @include mq('tab') {
+  @include mq('tablet') {
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -49,7 +49,7 @@
 
 @include theme-colors($theme-colors);
 
-@include mq('tab') {
+@include mq('tablet') {
   @for $i from 1 through 12 {
     .col-#{$i} {
       flex-basis: nm-to-pc($i,12);

@@ -5,7 +5,7 @@
 
 .img-logo {
   @include center;
-  @include mq('tab') {
+  @include mq('tablet') {
     margin-left: initial;
     margin-right: initial;
   }
