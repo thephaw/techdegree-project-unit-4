@@ -22,12 +22,18 @@
 // Center
 @mixin center (
 $disp: block,
-$img-margin: null auto null auto,
+$margin-t: null,
+$margin-r: auto,
+$margin-b: null,
+$margin-l: auto,
 $max-w: null,
 $max-h: null,
 ){
   display: $disp;
-  margin: $img-margin;
+  margin-top: $margin-t;
+  margin-right: $margin-r;
+  margin-bottom: $margin-b;
+  margin-left: $margin-l;
   max-width: $max-w;
   max-height: $max-h;
   @content;
@@ -35,4 +41,10 @@ $max-h: null,
 
 
 // Media Queries
-
+@mixin mq($break) {
+  @if $break == 'tab' {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+}

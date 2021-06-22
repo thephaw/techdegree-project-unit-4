@@ -5,7 +5,7 @@
 
 .img-logo {
   @include center;
-  @media (min-width: 768px) {
+  @include mq('tab') {
     margin-left: initial;
     margin-right: initial;
   }
@@ -13,11 +13,11 @@
 
 
 .img-avatar {
-  @include center ($img-margin: 10px auto null auto, $max-w: 100%, $max-h: 100%);
+  @include center($margin-t: 10px, $max-w: 100%, $max-h: 100%);
 }
   
 .img-frame {
-  @include center ($img-margin: 10px auto null auto, $max-w: 100%){
+  @include center($margin-t: 10px, $max-w: 100%){
     padding: 13px;
     border: 1px solid $lt-grey;
   }

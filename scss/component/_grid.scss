@@ -4,17 +4,23 @@
 
 .container {
   padding: 0 10px;
-  @media (min-width: 768px) {
+  @include mq('tab') {
     max-width: $max-width;
     @include center;
   }
 }
-  
+
+.centered {  
+  @include mq('tab') {
+    @include center;
+  }
+}
+
 .row {
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
-  @media (min-width: 768px) {
+  @include mq('tab') {
     flex-direction: row;
   }
 }
@@ -25,7 +31,7 @@
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
-  @media (min-width: 768px) {
+  @include mq('tab') {
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -40,16 +46,10 @@
   flex-basis: 100%;
 }
 
-.centered {  
-  @media (min-width: 768px) {
-    @include center;
-  }
-}
-
 
 @include theme-colors($theme-colors);
 
-@media (min-width: 768px) {
+@include mq('tab') {
   @for $i from 1 through 12 {
     .col-#{$i} {
       flex-basis: nm-to-pc($i,12);

@@ -4,18 +4,20 @@
 
 // Commonly used Colors
 $lt-grey: #ccc;
+$white: #fff;
 
 // Main Colors
 
 $color-primary: #58e1c1;
 $color-secondary: #777; 
+$color-complement: complement($color-primary);
 $color-links: #51ddfc;
 $color-button-text: #fff;
 
 // Button Background Colors
 
 $btn-bg-colors: (
-'default': #58e1c1,
+'default': #51ddfc,
 'success': #63cc82,
 'error': #e4757a,
 'warning': #fd7856,
@@ -43,9 +45,15 @@ $max-width: 1400px;
 
 
 // Media Query Breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$web: 1024px;
 
-$breakpoints: (
-    'mobile': 768px,
+
+$mq-bp: (
+    'mobile': 320px,
+    'tablet': 768px,
+       'web': 1024px,
 );
 
 // Font Variables
