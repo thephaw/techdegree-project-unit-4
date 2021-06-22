@@ -446,6 +446,26 @@ a {
   background-color: #927bc1;
 }
 
+.default:hover {
+  background-color: #83e7fd;
+}
+
+.success:hover {
+  background-color: #89d9a1;
+}
+
+.error:hover {
+  background-color: #eca0a3;
+}
+
+.warning:hover {
+  background-color: #fea088;
+}
+
+.info:hover {
+  background-color: #af9ed1;
+}
+
 .form {
   flex-basis: 100%;
 }

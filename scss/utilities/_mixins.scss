@@ -9,6 +9,11 @@
       background-color: $color;
     }
   }
+  @each $button-name, $base in $map {
+    .#{$button-name}:hover {
+      background-color: lighten($base, 10%);
+    }
+  }
 }
 
 @mixin theme-colors($map) {
